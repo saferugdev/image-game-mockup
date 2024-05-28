@@ -1,5 +1,5 @@
 import streamlit as st
-from compare_images import compare
+from compare_images import compare_images
 
 train1 = r"images/train1.png"
 train2 = r"images/train2.png"
@@ -21,7 +21,7 @@ trains = {
     }
 
 
-def compare_images(): 
+def image_similarity_testing(): 
     i = 1
     if st.button("Compare"):
         while i < len(trains) + 1:

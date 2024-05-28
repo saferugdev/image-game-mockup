@@ -1,7 +1,7 @@
 import streamlit as st
 from sidebar import sidebar
 from daily import daily
-from compare_images import compare
+from image_similarity_testing import image_similarity_testing
 st.set_page_config(layout="wide")
 
 sidebar()
@@ -18,8 +18,8 @@ def play_weekly_challenge():
 def main_menu():
     st.session_state["page"] = "main_menu"
 
-def compare():
-    st.session_state["page"] = "compare"
+def image_similarity_testing():
+    st.session_state["page"] = "image_similarity_testing"
 
 
 if "page" not in st.session_state:
@@ -41,11 +41,11 @@ elif st.session_state["page"] == "weekly_challenge":
 elif st.session_state["page"] == "compare":
     st.header("Image Similarity Testing")
     st.button("Back", on_click=main_menu)
-    compare()
+    image_similarity_testing()
 elif st.session_state["page"] == "main_menu":
     st.header("Menu")
     st.button("Profile", on_click=profile)
-    st.button("Image Similarity Testing", on_click=compare)
+    st.button("Image Similarity Testing", on_click=image_similarity_testing)
     st.button("Daily Challenge", on_click=play_daily_challenge)
     st.button("Weekly Challenge", on_click=play_weekly_challenge)
 
