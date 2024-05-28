@@ -21,7 +21,7 @@ trains = {
     }
 
 
-def compare(): 
+def compare_images(): 
     i = 1
     if st.button("Compare"):
         while i < len(trains) + 1:

@@ -1,6 +1,7 @@
 import streamlit as st
 from sidebar import sidebar
 from daily import daily
+from compare_images import compare
 st.set_page_config(layout="wide")
 
 sidebar()
@@ -38,6 +39,7 @@ elif st.session_state["page"] == "weekly_challenge":
     st.button("Back", on_click=main_menu)
 elif st.session_state["page"] == "compare":
     st.header("Image Similarity Testing")
+    compare()
     st.button("Back", on_click=main_menu)
 elif st.session_state["page"] == "main_menu":
     st.header("Menu")
