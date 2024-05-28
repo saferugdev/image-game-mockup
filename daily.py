@@ -2,7 +2,6 @@ import streamlit as st
 from st_click_detector import click_detector
 import random
 from clock import add_clock
-from compare_images import compare
 
 content = """
     <a href='#' id='Image 1'><img width='20%' src='https://replicate.delivery/pbxt/sWeZFZou6v3CPKuoJbqX46ugPaHT1DcsWYx0srPmGrMOCPYIA/out-0.png'></a>
