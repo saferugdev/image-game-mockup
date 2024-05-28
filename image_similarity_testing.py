@@ -25,7 +25,7 @@ def image_similarity_testing():
     i = 1
     if st.button("Compare"):
         while i < len(trains) + 1:
-            res = compare(train1,trains[f"train{i}"])
+            res = compare_images(train1,trains[f"train{i}"])
             con = st.container(border=True)
             col1,col2,col3,col4 = con.columns(4)
             col1.image(train1,width=200)
