@@ -17,6 +17,10 @@ def play_weekly_challenge():
 def main_menu():
     st.session_state["page"] = "main_menu"
 
+def compare():
+    st.session_state["page"] = "compare"
+
+
 if "page" not in st.session_state:
     st.session_state["page"] = "main_menu"
 if st.session_state["page"] == "profile":
@@ -32,9 +36,13 @@ elif st.session_state["page"] == "daily_challenge":
 elif st.session_state["page"] == "weekly_challenge":
     st.header("Weekly Challenge")
     st.button("Back", on_click=main_menu)
+elif st.session_state["page"] == "compare":
+    st.header("Image Similarity Testing")
+    st.button("Back", on_click=main_menu)
 elif st.session_state["page"] == "main_menu":
     st.header("Menu")
     st.button("Profile", on_click=profile)
+    st.button("Image Similarity Testing", on_click=compare)
     st.button("Daily Challenge", on_click=play_daily_challenge)
     st.button("Weekly Challenge", on_click=play_weekly_challenge)
 
