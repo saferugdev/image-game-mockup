@@ -56,13 +56,13 @@ def daily():
             st.image(goal_image,width=512)
         with tab2:
             st.image(_image,width=512)
-        con = st.container(border=True)
-        with con:
-            st.write("History:")
-            clicked = click_detector(content)
-            if clicked != "" and clicked != st.session_state["selected_img"]:
-                print(f"if clicked is not '': {clicked}")
-                st.session_state["selected_img"] = clicked
-                st.experimental_rerun()
+            con = st.container(border=True)
+            with con:
+                st.write("History:")
+                clicked = click_detector(content)
+                if clicked != "" and clicked != st.session_state["selected_img"]:
+                    print(f"if clicked is not '': {clicked}")
+                    st.session_state["selected_img"] = clicked
+                    st.experimental_rerun()
 
 
