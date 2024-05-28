@@ -32,15 +32,16 @@ if st.session_state["page"] == "profile":
     if my_upload is not None:
         st.image(my_upload,width=150)
 elif st.session_state["page"] == "daily_challenge":
-    daily()
+    st.header("Daily Challenge")
     st.button("Back", on_click=main_menu)
+    daily()
 elif st.session_state["page"] == "weekly_challenge":
     st.header("Weekly Challenge")
     st.button("Back", on_click=main_menu)
 elif st.session_state["page"] == "compare":
     st.header("Image Similarity Testing")
-    compare()
     st.button("Back", on_click=main_menu)
+    compare()
 elif st.session_state["page"] == "main_menu":
     st.header("Menu")
     st.button("Profile", on_click=profile)

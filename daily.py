@@ -35,7 +35,6 @@ def daily():
     if "selected_img" not in st.session_state:
         st.session_state["selected_img"] = "Image 1"    
     _image = images[st.session_state["selected_img"]]
-    st.header("Daily Challenge")
     add_clock()
 
     col1, col2 = st.columns(2)
